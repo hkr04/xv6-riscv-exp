@@ -132,7 +132,7 @@ static uint64 (*syscalls[])(void) = {
 
 // An array mapping syscall numbers from syscall.h
 // to the name of the system call.
-static uint64 (*syscalls_name[])(void) = {
+static char *syscalls_name[] = {
 [SYS_fork]    "fork",
 [SYS_exit]    "exit",
 [SYS_wait]    "wait",
