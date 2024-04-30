@@ -13,10 +13,5 @@ main(int argc, char *argv[])
 
     test_heap();
 
-    // if (exec(argv[0], argv) < 0) { 
-    //     fprintf(2, "Execution failed\n");
-    //     exit(1);
-    // }
-
     exit(0);
 }

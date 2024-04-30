@@ -46,7 +46,7 @@ show_heap()
     //   printf("next: NULL\n");
     cur = cur->next;
   }
-  printf("Total free blocks: %d\n", total_free_blocks);
+  printf("Total free block(s): %d\n", total_free_blocks);
   printf("Total free space: %d bytes\n", total_free_space);
   printf("Max free block size: %d bytes\n", max_block_size);
   printf("Min free block size: %d bytes\n", min_block_size);
@@ -223,7 +223,7 @@ test_heap()
   // printf("head at: %d\n", (uint64)head - HEAPSTART);
   show_heap();
   struct run *cur = head;
-  for (size_t i = 1; i <= 4; i <<= 1) {
+  for (size_t i = 1; i <= 1024; i <<= 1) {
     printf("try to allocate %d bytes\n", i + sizeof(struct run));
     void *ptr = malloc(i + sizeof(struct run));
     if (ptr == NULL) {
