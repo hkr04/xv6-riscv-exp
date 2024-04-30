@@ -45,7 +45,8 @@
 // for use by the kernel and user pages
 // from physical address 0x80000000 to PHYSTOP.
 #define KERNBASE 0x80000000L
-#define PHYSTOP (KERNBASE + 128*1024*1024 - 16*1024*1024)
+#define HEAP_SIZE 16*1024*1024
+#define PHYSTOP (KERNBASE + 128*1024*1024 - HEAP_SIZE)
 #define HEAPSTART (PHYSTOP)
 #define HEAPSTOP (KERNBASE + 128*1024*1024)
 

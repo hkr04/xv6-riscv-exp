@@ -8,6 +8,7 @@ OBJS = \
   $K/printf.o \
   $K/uart.o \
   $K/kalloc.o \
+  $K/kheap.o \
   $K/spinlock.o \
   $K/string.o \
   $K/main.o \
@@ -133,6 +134,7 @@ UPROGS=\
 	$U/_wc\
 	$U/_zombie\
 	$U/_trace\
+	$U/_test_heap\
 
 fs.img: mkfs/mkfs README $(UPROGS)
 	mkfs/mkfs fs.img README $(UPROGS)

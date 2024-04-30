@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 struct buf;
 struct context;
 struct file;
@@ -63,6 +65,12 @@ void            ramdiskrw(struct buf*);
 void*           kalloc(void);
 void            kfree(void *);
 void            kinit(void);
+
+// kheap.c
+void            test_heap(void);
+void*           alloc(size_t);
+void            free(void *);
+void            hinit(void);
 
 // log.c
 void            initlog(int, struct superblock*);

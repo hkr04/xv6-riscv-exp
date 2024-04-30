@@ -104,3 +104,11 @@ sys_trace(void)
   p->trace_mask |= mask;
   return 0;
 }
+
+// a simple test for heap
+uint64
+sys_test_heap(void)
+{
+  test_heap();
+  return 0;
+}
